@@ -1,8 +1,6 @@
-import Layout from '../components/Layout'
+import Page from '../layouts/main'
 export default () => (
-  <div>
-    <Layout />
-    <p>Index page content!</p>
-    <Layout />
-  </div>
+  <Page>
+    <p>my page with global styles!</p>
+  </Page>
 )
