@@ -21,8 +21,7 @@ export default () => (
         body {
           width: 960px;
           margin: 16px auto;
-          border: 2px solid #66b3ff;
-          border-radius: 5px;
+          border-radius: 2px;
           }
       }
     `}
