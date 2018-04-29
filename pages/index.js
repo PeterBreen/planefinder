@@ -1,1 +1,8 @@
-export default () => <div>Welcome to next.js!</div>
+import Layout from '../components/Layout'
+export default () => (
+  <div>
+    <Layout />
+    <p>Index page content!</p>
+    <Layout />
+  </div>
+)
