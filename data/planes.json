@@ -1,10 +1,10 @@
 [{
-    "manufacturer": "boeing",
-    "model": "737",
-    "url": "/b737",
     "characteristics": {
+      "manufacturer": "boeing",
+      "model": "737",
       "body": "narrow",
       "engines": 2,
+      "engineloc": "underwing",
       "decks": 1,
       "nose": "pointy",
       "dorsalbump": true,
@@ -13,12 +13,12 @@
     }
   },
   {
-    "manufacturer": "airbus",
-    "model": "A320",
-    "url": "/a320",
     "characteristics": {
+      "manufacturer": "airbus",
+      "model": "A320",
       "body": "narrow",
       "engines": 2,
+      "engineloc": "underwing",
       "decks": 1,
       "nose": "rounded",
       "dorsalbump": false,
@@ -27,12 +27,12 @@
     }
   },
   {
-    "manufacturer": "airbus",
-    "model": "A319",
-    "url": "/a319",
     "characteristics": {
+      "manufacturer": "airbus",
+      "model": "A319",
       "body": "narrow",
       "engines": 2,
+      "engineloc": "underwing",
       "decks": 1,
       "nose": "rounded",
       "dorsalbump": false,
