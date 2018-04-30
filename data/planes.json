@@ -1,0 +1,43 @@
+[{
+    "manufacturer": "boeing",
+    "model": "737",
+    "url": "/b737",
+    "characteristics": {
+      "body": "narrow",
+      "engines": 2,
+      "decks": 1,
+      "nose": "pointy",
+      "dorsalbump": true,
+      "cockpitwindow": "angular",
+      "overwingexits": 2
+    }
+  },
+  {
+    "manufacturer": "airbus",
+    "model": "A320",
+    "url": "/a320",
+    "characteristics": {
+      "body": "narrow",
+      "engines": 2,
+      "decks": 1,
+      "nose": "rounded",
+      "dorsalbump": false,
+      "cockpitwindow": "rectangular",
+      "overwingexits": 2
+    }
+  },
+  {
+    "manufacturer": "airbus",
+    "model": "A319",
+    "url": "/a319",
+    "characteristics": {
+      "body": "narrow",
+      "engines": 2,
+      "decks": 1,
+      "nose": "rounded",
+      "dorsalbump": false,
+      "cockpitwindow": "rectangular",
+      "overwingexits": 1
+    }
+  }
+]
