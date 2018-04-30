@@ -18,9 +18,20 @@ const Index = (props) => (
         font-size: 2.5rem;
         margin-bottom: 1rem;
       }
-      ul, li, a {
+      ul {
+        list-style-type: disc;
+        margin-left: 1rem;
+        padding-left: 0.5rem;
+      }
+      li {
         line-height: 1.5;
         font-size: 1.5rem;
+      }
+      li a {
+        text-decoration: none;
+      }
+      li a:hover {
+        text-decoration: underline;
       }
     `}</style>
   </Page>
