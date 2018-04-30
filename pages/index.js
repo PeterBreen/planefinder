@@ -7,7 +7,7 @@ const Index = (props) => (
     <ul>
       {props.planes.map(({characteristics}) => (
         <li key={characteristics.model}>
-          <Link as={`/p/${characteristics.model}`} href={`/${characteristics.model}`}>
+          <Link as={`/p/${characteristics.manufacturer}-${characteristics.model}`} href={`/${characteristics.manufacturer}-${characteristics.model}`}>
             <a>{characteristics.manufacturer} {characteristics.model}</a>
           </Link>
         </li>
