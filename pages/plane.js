@@ -1,0 +1,8 @@
+import Page from '../layouts/main'
+
+export default (props) => (
+    <Page>
+       <h1>{props.url.query.title}</h1>
+       <p>This is the plane detail page content.</p>
+    </Page>
+)
