@@ -1,6 +1,6 @@
 [{
     "characteristics": {
-      "manufacturer": "boeing",
+      "manufacturer": "Boeing",
       "model": "737",
       "body": "narrow",
       "engines": 2,
@@ -14,7 +14,7 @@
   },
   {
     "characteristics": {
-      "manufacturer": "airbus",
+      "manufacturer": "Airbus",
       "model": "A320",
       "body": "narrow",
       "engines": 2,
@@ -28,7 +28,7 @@
   },
   {
     "characteristics": {
-      "manufacturer": "airbus",
+      "manufacturer": "Airbus",
       "model": "A319",
       "body": "narrow",
       "engines": 2,
