@@ -11,11 +11,13 @@ export default () => (
 
       html {
         background: #87CEEB;
+
       }
       body {
         background: #fff;
         width: 100%;
         padding: 8px;
+        font-size: 16px;
       }
       @media screen and (min-width: 960px) {
         body {
