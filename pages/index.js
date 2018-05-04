@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Index = (props) => (
   <Page>
-    <h1>Data Fetch Test</h1>
+    <h1>List of Planes</h1>
     <ul>
       {props.planes.map(({characteristics}) => (
         <li key={characteristics.model}>
@@ -41,9 +41,6 @@ const Index = (props) => (
 
 Index.getInitialProps = async function() {
   const data = await import('../data/planes.json')
-  console.log(data);
-
-  console.log(`Show data fetched. Count: ${data.length}`)
 
   return {
     planes: data
