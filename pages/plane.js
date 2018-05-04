@@ -5,10 +5,10 @@ const Plane = (props) => (
        <h1>{props.url.query.title}</h1>
 
       {props.planes.filter(function (characteristics) {
-         return characteristics.url === "Airbus-A319"
+         return props.url.query.title === characteristics.url
        }).map(({characteristics}) => (
          <p key={characteristics.model}>
-          The {characteristics.manufacturer} {characteristics.model} is a {characteristics.body}body aircraft with {characteristics.engines.toString()} engines, a {characteristics.nosecone} nose, and {characteristics.overwingexits.toString()} overwing exits.
+          The {characteristics.manufacturer} {characteristics.model} is a {characteristics.body}body aircraft with {characteristics.engines.toString()} {characteristics.engineloc} engines, a {characteristics.nose} nose, and {characteristics.overwingexits.toString()} overwing exits.
          </p>
        ))}
 
