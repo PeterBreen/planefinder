@@ -1,6 +1,6 @@
 [{
+    "url": "Boeing-737",
     "characteristics": {
-      "url": "Boeing-737",
       "manufacturer": "Boeing",
       "model": "737",
       "body": "narrow",
@@ -14,8 +14,8 @@
     }
   },
   {
+    "url": "Airbus-A320",
     "characteristics": {
-      "url": "Airbus-A320",
       "manufacturer": "Airbus",
       "model": "A320",
       "body": "narrow",
@@ -29,8 +29,8 @@
     }
   },
   {
+    "url": "Airbus-A319",
     "characteristics": {
-      "url": "Airbus-A319",
       "manufacturer": "Airbus",
       "model": "A319",
       "body": "narrow",
