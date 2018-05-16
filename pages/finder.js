@@ -18,6 +18,8 @@ class Finder extends React.Component {
 
   handleSubmit(event) {
     console.log('handleSubmit() just happened to event: ', event)
+    console.log('this.state.nose: ', this.state.nose)
+    console.log('this.state.overwingexits: ', this.state.overwingexits)
     event.preventDefault();
   }
 
@@ -27,19 +29,16 @@ class Finder extends React.Component {
         <div>
         <h1>Plane Finder</h1>
         <p>Answer the following questions to determine what your plane is.</p>
-        <h3>Is the nosecone pointy or rounded?</h3>
 
             <form onSubmit={this.handleSubmit}>
-                <input type="text" value={this.state.nose} id="nose" onChange={(e) => this.handleChange(e)} />
+              <label>Is the nosecone pointy or rounded?
+                <input type="text" value={this.state.nose} id="nose" onChange={(e) => this.handleChange(e)} /></label>
+              <label>How many overwing exits are there per side?
+                <input type="text" value={this.state.overwingexits} id="overwingexits" onChange={(e) => this.handleChange(e)} /></label>
+
               <input type="submit" value="Submit" />
             </form>
 
-        <h3>How many overwing exits are there per side?</h3>
-
-        <form onSubmit={this.handleSubmit}>
-            <input type="text" value={this.state.overwingexits} id="overwingexits" onChange={(e) => this.handleChange(e)} />
-          <input type="submit" value="Submit" />
-        </form>
 
         </div>
       <style jsx>{`
@@ -47,19 +46,16 @@ class Finder extends React.Component {
           font-size: 2.5rem;
           margin-bottom: 1rem;
         }
-        h3 {
-         font-size: 1.25rem;
-         margin: 0.75rem 0;
-       }
        input {
          margin: 0.75rem 0;
-         display: inline-block;
+         display: block;
        }
        input:nth-of-type(even) {
          margin-left: 1rem;
        }
        label {
-         margin-left: 0.5rem;
+         margin: 0.5rem 0 0 0.5rem;
+         display: block;
        }
       `}</style>
     </Page>
