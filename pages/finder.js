@@ -31,7 +31,13 @@ class Finder extends React.Component {
         <h3>Is the nosecone pointy or rounded?</h3>
         <h3>How many overwing exits are there per side?</h3>
 
-
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Name:
+            <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
 
 
         </div>
