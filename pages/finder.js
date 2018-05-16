@@ -1,33 +1,40 @@
+import React from 'react'
 import Page from '../layouts/main'
 
-export default () => (
-    <Page>
-      <div>
-      <h1>Plane Finder</h1>
-      <p>Answer the following questions to determine what your plane is.</p>
-      <h3>Is the nosecone pointy or rounded?</h3>
+class Finder extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {characteristics: {
+        nose: '',
+        overwingexits: '',
+      }};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <Page>
         <div>
-          <input type="radio" id="pointynose"
-          name="nosecone" value="pointy" />
-          <label for="pointynose">Pointy</label>
-          <input type="radio" id="roundednose"
-          name="nosecone" value="rounded" />
-          <label for="roundednose">Rounded</label>
+        <h1>Plane Finder</h1>
+        <p>Answer the following questions to determine what your plane is.</p>
+        <h3>Is the nosecone pointy or rounded?</h3>
+        <h3>How many overwing exits are there per side?</h3>
+
+
+
+
         </div>
-
-      <h3>How many overwing exits are there per side?</h3>
-        <div>
-          <input type="radio" id="oneexit"
-          name="overwing" value="oneexit" />
-          <label for="oneexit">One</label>
-          <input type="radio" id="twoexits"
-          name="overwing" value="twoexits" />
-          <label for="twoexits">Two</label>
-        </div>
-
-        <button type="submit" value="submit" id="findersubmit">Submit</button>
-
-      </div>
       <style jsx>{`
         h1 {
           font-size: 2.5rem;
@@ -49,4 +56,17 @@ export default () => (
        }
       `}</style>
     </Page>
-)
+
+    )
+  }
+}
+
+Finder.getInitialProps = async function() {
+  const data = await import('../data/planes.json')
+
+  return {
+    planes: data
+  }
+}
+
+export default Finder
