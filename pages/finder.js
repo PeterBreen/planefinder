@@ -1,6 +1,6 @@
 import Page from '../layouts/main'
 
-const Finder = (props) => (
+export default () => (
     <Page>
       <div>
       <h1>Plane Finder</h1>
@@ -49,8 +49,4 @@ const Finder = (props) => (
        }
       `}</style>
     </Page>
-
 )
-
-
-export default Finder
