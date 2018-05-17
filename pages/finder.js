@@ -18,8 +18,7 @@ class Finder extends React.Component {
 
   handleSubmit(event) {
     console.log('handleSubmit() just happened to event: ', event)
-    console.log('this.state.nose: ', this.state.nose)
-    console.log('this.state.overwingexits: ', this.state.overwingexits)
+    console.log('this.state is: ', this.state)
     event.preventDefault();
   }
 
