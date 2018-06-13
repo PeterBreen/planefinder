@@ -17,7 +17,7 @@ class Finder extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log('handleSubmit() called, they want their input back')
+    console.log('handleSubmit() called, they want their input back. this.state is: ', this.state)
     event.preventDefault();
   }
 
@@ -37,6 +37,16 @@ class Finder extends React.Component {
               <label>
                  <input type="radio" value="rounded" data-question="nose" checked={this.state.nose === "rounded"} onChange={(e) => this.handleChange(e)} />
                  Rounded
+              </label>
+
+              <h3>How many overwing exits are there per side?</h3>
+              <label>
+                 <input type="radio" value="1" data-question="overwingexits" checked={this.state.overwingexits === "1"} onChange={(e) => this.handleChange(e)} />
+                 1
+              </label>
+              <label>
+                 <input type="radio" value="2" data-question="overwingexits" checked={this.state.overwingexits === "2"} onChange={(e) => this.handleChange(e)} />
+                 2
               </label>
 
               <input type="submit" value="Submit" />
