@@ -16,9 +16,10 @@ class Finder extends React.Component {
     this.setState({[e.target.dataset.question]: e.target.value});
   }
 
-  handleSubmit(event) {
+  handleSubmit(e) {
     console.log('handleSubmit() called, they want their input back. this.state is: ', this.state)
-    event.preventDefault();
+
+    e.preventDefault();
   }
 
   render() {
