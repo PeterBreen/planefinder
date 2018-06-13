@@ -12,13 +12,12 @@ class Finder extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({[event.target.id]: event.target.value});
+  handleChange(e) {
+    this.setState({[e.target.dataset.question]: e.target.value});
   }
 
   handleSubmit(event) {
-    console.log('handleSubmit() just happened to event: ', event)
-    console.log('this.state is: ', this.state)
+    console.log('handleSubmit() called, they want their input back')
     event.preventDefault();
   }
 
@@ -30,10 +29,15 @@ class Finder extends React.Component {
         <p>Answer the following questions to determine what your plane is.</p>
 
             <form onSubmit={this.handleSubmit}>
-              <label>Is the nosecone pointy or rounded?
-                <input type="text" value={this.state.nose} id="nose" onChange={(e) => this.handleChange(e)} /></label>
-              <label>How many overwing exits are there per side?
-                <input type="text" value={this.state.overwingexits} id="overwingexits" onChange={(e) => this.handleChange(e)} /></label>
+              <h3>Is the nosecone pointy or rounded?</h3>
+              <label>
+                 <input type="radio" value="pointy" data-question="nose" checked={this.state.nose === "pointy"} onChange={(e) => this.handleChange(e)} />
+                 Pointy
+              </label>
+              <label>
+                 <input type="radio" value="rounded" data-question="nose" checked={this.state.nose === "rounded"} onChange={(e) => this.handleChange(e)} />
+                 Rounded
+              </label>
 
               <input type="submit" value="Submit" />
             </form>
@@ -46,8 +50,8 @@ class Finder extends React.Component {
           margin-bottom: 1rem;
         }
        input {
-         margin: 0.75rem 0;
-         display: block;
+         margin: 0.75rem 0.75rem 0 0.75rem;
+         display: inline-block;
        }
        input:nth-of-type(even) {
          margin-left: 1rem;
