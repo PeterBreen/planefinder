@@ -1,5 +1,7 @@
 import React from 'react'
 import Page from '../layouts/main'
+import Router from 'next/router'
+
 
 class Finder extends React.Component {
   constructor(props) {
@@ -10,6 +12,7 @@ class Finder extends React.Component {
       };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.evalSelection = this.evalSelection.bind(this);
   }
 
   handleChange(e) {
@@ -18,9 +21,22 @@ class Finder extends React.Component {
 
   handleSubmit(e) {
     console.log('handleSubmit() called, they want their input back. this.state is: ', this.state)
-
     e.preventDefault();
+    this.evalSelection();
   }
+
+  evalSelection() {
+    if(this.state.nose === 'pointy' && this.state.overwingexits === '2') {
+        Router.push('/p/Boeing-737');
+      } else if(this.state.nose === 'rounded' && this.state.overwingexits === '1') {
+        Router.push('/p/Airbus-A319');
+      } else if(this.state.nose === 'rounded' && this.state.overwingexits === '2') {
+        Router.push('/p/Airbus-A320');
+      } else {
+        alert('I don\'t know any planes with that particular configuration. Sorry!')
+      }
+    }
+
 
   render() {
     return (
