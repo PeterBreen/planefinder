@@ -60,6 +60,10 @@ class Finder extends React.Component {
          margin: 0.5rem 0 0 0.5rem;
          display: block;
        }
+       h3 {
+        font-size: 1.25rem;
+        margin: 0.75rem;
+      }
       `}</style>
     </Page>
 
