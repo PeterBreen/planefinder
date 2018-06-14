@@ -26,6 +26,7 @@ class Finder extends React.Component {
   }
 
   evalSelection() {
+    //TODO: Replace with a proper score check which compares props.planes to this.state
     if(this.state.nose === 'pointy' && this.state.overwingexits === '2') {
         Router.push('/p/Boeing-737');
       } else if(this.state.nose === 'rounded' && this.state.overwingexits === '1') {
