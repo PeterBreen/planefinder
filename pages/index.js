@@ -3,7 +3,9 @@ import Link from 'next/link'
 
 const Index = (props) => (
   <Page>
-    <h1>List of Planes</h1>
+    <h1>Planefinder</h1>
+    <p>Use <Link prefetch href={`/finder`}><a>the Planefinder tool</a></Link> to determine what plane you are looking at.</p>
+    <h2>List of Planes</h2>
     <ul>
       {props.planes.map(({characteristics}) => (
         <li key={characteristics.model}>
@@ -13,9 +15,16 @@ const Index = (props) => (
         </li>
       ))}
     </ul>
+
     <style jsx>{`
       h1 {
         font-size: 2.5rem;
+      }
+      h2 {
+        margin-top: 1rem;
+        font-size: 2.25rem;
+      }
+      h1, h2 {
         margin-bottom: 1rem;
       }
       ul {
